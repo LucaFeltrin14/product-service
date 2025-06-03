@@ -20,3 +20,10 @@ spring:
   flyway:
     schemas: product
     baseline-on-migrate: true
+
+  # ─────────────────────────────────────────────────────────────
+  # Configuração mínima de Redis (host/porta via ENV do compose)
+  data:
+    redis:
+      host: ${REDIS_HOST:redis}
+      port: ${REDIS_PORT:6379}
